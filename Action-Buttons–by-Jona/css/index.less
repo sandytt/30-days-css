@@ -26,27 +26,50 @@
     width: 200px;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 1px 8px 3px rgba(0,0,0,.15);
-    span {
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, .15);
+    a {
         display: inline-block;
-        .size(100px, 36px);
+        .size(auto, 36px);
+        padding: 0 18px;
         line-height: 32px;
         color: #fff;
         text-transform: uppercase;
+        cursor: pointer;
         &:first-child {
-            background-image: -webkit-linear-gradient(top, #aab7c5, #78808f);
+            background: -webkit-linear-gradient(top, #aab7c5, #78808f);
+            background: linear-gradient(top, #aab7c5, #78808f);
             border-radius: 2px;
-            border-style:solid;
+            border-style: solid;
             border-color: #c1cad4 #a6afba #989fa9 #afbac6;
-            box-shadow:0 0 0 1px #8d98a4;
+            box-shadow: 0 0 0 1px #8d98a4;
+            transition: background .3s;
+            &:hover,
+            &:focus {
+                background: -webkit-linear-gradient(top, tint(#aab7c5, 20%), tint(#78808f, 20%));
+                background: linear-gradient(top, tint(#aab7c5, 20%), tint(#78808f, 20%));
+            }
+            &:active {
+                background: -webkit-linear-gradient(top, shade(#aab7c5, 20%), shade(#78808f, 20%));
+                background: linear-gradient(top, shade(#aab7c5, 20%), shade(#78808f, 20%));
+            }
         }
         &:last-child {
-            background-image: -webkit-linear-gradient(top, #91b9e4, #4f79cf);
+            background: -webkit-linear-gradient(top, #91b9e4, #4f79cf);
             border-radius: 0 2px 2px 0;
-            border-style:solid;
+            border-style: solid;
             border-color: #accaeb #98bae5 #7698db #9cbde6;
-            box-shadow:0 0 0 1px #8d98a4;
+            box-shadow: 0 0 0 1px #8d98a4;
             margin-left: -1px;
+            transition: background .3s;
+            &:hover,
+            &:focus {
+                background: -webkit-linear-gradient(top, tint(#91b9e4, 20%), tint(#4f79cf, 20%));
+                background: linear-gradient(top, tint(#91b9e4, 20%), tint(#4f79cf, 20%));
+            }
+            &:active {
+                background: -webkit-linear-gradient(top, shade(#91b9e4, 20%), shade(#4f79cf, 20%));
+                background: linear-gradient(top, shade(#91b9e4, 20%), shade(#4f79cf, 20%));
+            }
         }
     }
 }
