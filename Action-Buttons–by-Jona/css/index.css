@@ -13,22 +13,21 @@
 }
 .btn a {
   display: inline-block;
-  width: auto;
   height: 36px;
   padding: 0 18px;
   line-height: 32px;
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background .3s;
+  border-radius: 2px;
 }
 .btn a:first-child {
   background: -webkit-linear-gradient(top, #aab7c5, #78808f);
   background: linear-gradient(top, #aab7c5, #78808f);
-  border-radius: 2px;
   border-style: solid;
   border-color: #c1cad4 #a6afba #989fa9 #afbac6;
   box-shadow: 0 0 0 1px #8d98a4;
-  transition: background .3s;
 }
 .btn a:first-child:hover,
 .btn a:first-child:focus {
@@ -46,7 +45,6 @@
   border-color: #accaeb #98bae5 #7698db #9cbde6;
   box-shadow: 0 0 0 1px #8d98a4;
   margin-left: -1px;
-  transition: background .3s;
 }
 .btn a:last-child:hover,
 .btn a:last-child:focus {

@@ -29,20 +29,20 @@
     box-shadow: 0 1px 8px 3px rgba(0, 0, 0, .15);
     a {
         display: inline-block;
-        .size(auto, 36px);
+        height: 36px;
         padding: 0 18px;
         line-height: 32px;
         color: #fff;
         text-transform: uppercase;
         cursor: pointer;
+        transition: background .3s;
+        border-radius: 2px;
         &:first-child {
             background: -webkit-linear-gradient(top, #aab7c5, #78808f);
             background: linear-gradient(top, #aab7c5, #78808f);
-            border-radius: 2px;
             border-style: solid;
             border-color: #c1cad4 #a6afba #989fa9 #afbac6;
             box-shadow: 0 0 0 1px #8d98a4;
-            transition: background .3s;
             &:hover,
             &:focus {
                 background: -webkit-linear-gradient(top, tint(#aab7c5, 20%), tint(#78808f, 20%));
@@ -60,7 +60,6 @@
             border-color: #accaeb #98bae5 #7698db #9cbde6;
             box-shadow: 0 0 0 1px #8d98a4;
             margin-left: -1px;
-            transition: background .3s;
             &:hover,
             &:focus {
                 background: -webkit-linear-gradient(top, tint(#91b9e4, 20%), tint(#4f79cf, 20%));
