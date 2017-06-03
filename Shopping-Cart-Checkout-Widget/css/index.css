@@ -4,6 +4,8 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 a,
 a:hover,
@@ -15,8 +17,7 @@ li {
   list-style-type: none;
 }
 .widget-box {
-  width: 580px;
-  height: 300px;
+  width: 500px;
   margin: 0 auto;
   font: 14px Arial, '微软雅黑';
   border: 1px solid #202020;
@@ -78,7 +79,15 @@ li {
   background: -webkit-linear-gradient(#70af44 50%, #579e25 50%);
   background: linear-gradient(#70af44 50%, #579e25 50%);
 }
+.widget-box footer a:hover,
+.widget-box footer a:focus {
+  color: #f4fcfe;
+}
+.widget-box footer a:active {
+  color: #283032;
+}
 .widget-box ul.widget-items {
+  border-top: 1px solid #000;
   zoom: 1;
 }
 .widget-box ul.widget-items:after {
@@ -89,13 +98,22 @@ li {
 }
 .widget-box ul.widget-items li {
   float: left;
+  width: 100%;
+  background: -webkit-linear-gradient(#575757, #4f4f4f);
+  background: linear-gradient(#575757, #4f4f4f);
+  border-bottom: 1px solid #000;
+  position: relative;
+  transition: all .3s;
 }
 .widget-box ul.widget-items li cite {
-  display: inline-block;
+  float: left;
   width: 46px;
   height: 46px;
   background: #000;
   position: relative;
+  margin-right: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
 }
 .widget-box ul.widget-items li cite:after {
   width: 100%;
@@ -106,7 +124,7 @@ li {
   left: 0;
   width: 0;
   height: 0;
-  border-width: 0 0 46px 46px;
+  border-width: 0 0 45px 45px;
   border-style: solid;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
 }
@@ -118,4 +136,29 @@ li {
 }
 .widget-box ul.widget-items li:nth-child(3) cite:after {
   background: url(http://www.w3school.com.cn/ui2017/compatible_firefox.png);
+}
+.widget-box ul.widget-items li > div {
+  padding: 7px 15px 7px 7px;
+  width: 100%;
+  float: left;
+  border: 1px solid #606060;
+}
+.widget-box ul.widget-items li:hover {
+  background: -webkit-linear-gradient(top, #505050, #3a3a3a);
+}
+.widget-box ul.widget-items .text {
+  height: 46px;
+  float: left;
+}
+.widget-box ul.widget-items .text p {
+  color: #fff;
+  margin-bottom: 6px;
+}
+.widget-box ul.widget-items .text span {
+  color: #b3c6cc;
+}
+.widget-box ul.widget-items .price {
+  margin-top: 15px;
+  float: right;
+  color: #eeeeee;
 }
