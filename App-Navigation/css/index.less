@@ -47,7 +47,7 @@ a {
         left: 50%;
         width: 340px;
         transform: translate(-50%, -50%);
-        box-shadow: 0px 0px 5px 5px #000 inset;
+        box-shadow: 0px 0px 5px 1px #000;
     }
     a {
         float: left;
@@ -62,11 +62,10 @@ a {
             font-style: normal;
             position: absolute;
             right: 0;
-            top: -13px;
+            top: -18px;
             text-align: center;
             color: #fff;
-            .size(26px,
-            26px);
+            .size(26px,26px);
             line-height: 24px;
             border-radius: 50%;
             border: 1px solid #6b4545;
@@ -78,6 +77,9 @@ a {
         }
         &:hover {
             color: #4c7cfd;
+        }
+        &:active {
+            color: #000;
         }
     }
 }

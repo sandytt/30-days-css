@@ -35,7 +35,7 @@ a:active {
   left: 50%;
   width: 340px;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 5px 5px #000 inset;
+  box-shadow: 0px 0px 5px 1px #000;
 }
 #nav a {
   float: left;
@@ -51,7 +51,7 @@ a:active {
   font-style: normal;
   position: absolute;
   right: 0;
-  top: -13px;
+  top: -18px;
   text-align: center;
   color: #fff;
   width: 26px;
@@ -67,4 +67,7 @@ a:active {
 }
 #nav a:hover {
   color: #4c7cfd;
+}
+#nav a:active {
+  color: #000;
 }
