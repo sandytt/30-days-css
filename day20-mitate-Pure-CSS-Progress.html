@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>coolfe-170628-imitate-Pure-CSS-Progress</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: Arial;
+    }
+    
+    a,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+    
+    .box {
+        width: 100%;
+        height: 100%;
+        background: #d0d0d0;
+    }
+    
+    .progress-box {
+        position: relative;
+        perspective: 1000px;
+    }
+    
+    .progress-item {
+        width: 360px;
+        height: 100px;
+        transform-origin: 50% 50%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .face {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    
+    .top {
+        width: 200px;
+        height: 100px;
+        left: 200px;
+        top: 100px;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        background: rgba(208, 203, 203, 0.3);
+    }
+    
+    .bottom {
+        width: 200px;
+        height: 100px;
+        left: 200px;
+        top: 300px;
+        transform: rotateX(90deg);
+        transform-origin: top;
+        box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
+    }
+    
+    .left {
+        left: 100px;
+        top: 200px;
+        transform: rotateY(90deg);
+        transform-origin: right;
+        background: rgba(254, 254, 254, 0.6);
+        z-index: 2;
+    }
+    
+    .right {
+        left: 401px;
+        top: 200px;
+        transform: rotateY(-90deg);
+        transform-origin: left;
+        background: rgba(254, 254, 254, 0.3);
+        z-index: 3;
+    }
+    
+    .front {
+        width: 200px;
+        height: 100px;
+        left: 200px;
+        top: 200px;
+        transform: translateZ(100px);
+        background: rgba(254, 254, 254, 0.3);
+        z-index: 4;
+    }
+    
+    .back {
+        width: 200px;
+        height: 100px;
+        left: 200px;
+        top: 200px;
+        transform: translateZ(0);
+        background: rgba(254, 254, 254, 0.3);
+    }
+    </style>
+</head>
+
+<body>
+    <!-- imitate in https://codepen.io/rgg/full/QbRyOq -->
+    <div class="box">
+        <div class="progress-box">
+            <div class="progress-item">
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+                <div class="face front"></div>
+                <div class="face back"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
