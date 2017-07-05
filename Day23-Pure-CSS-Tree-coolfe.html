@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>coolfe-170701-Pure-CSS-Tree</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: Arial;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    a,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+    
+    .box {
+        width: 100%;
+        height: 100%;
+        background: #e6e6e6;
+    }
+    
+    .tree-box {
+        padding: 50px;
+    }
+    
+    .tree-box input[type='checkbox'] {
+        display: none;
+    }
+    
+    .tree-box label {
+        display: inline-block;
+        position: relative;
+        line-height: 30px;
+        color: #434a58;
+        padding-left: 20px;
+        cursor: pointer;
+        border-bottom: 1px dashed #434a58;
+        width: 80%;
+    }
+    
+    .tree-box label:hover {
+        color: #434a58;
+        border-bottom-color: #B0B9C5;
+    }
+    
+    .tree-box label:after {
+        position: absolute;
+        content: '';
+        top: 10px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+    }
+    
+    .tree-box input[type='checkbox'] ~ ul > li {
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .tree-box input[type='checkbox']:checked ~ ul > li {
+        line-height: 30px;
+        height: auto;
+    }
+    
+    .tree-box input[type='checkbox']:checked + label {
+        border-bottom-color: #434a58;
+    }
+    
+    .tree-box input[type='checkbox']:checked + label:hover {
+        border-bottom-color: #434a58;
+    }
+    
+    .tree-box ul {
+        padding-left: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="tree-box">
+            <input type="checkbox" id="view">
+            <label for="view">view</label>
+            <ul>
+                <li>index.html</li>
+                <li>
+                    <input type="checkbox" id="layout">
+                    <label for="layout">layout</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="base">
+                            <label for="base">
+                                base</label>
+                            <ul class="child">
+                                <li>index.html</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
