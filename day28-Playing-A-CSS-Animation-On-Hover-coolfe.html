@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>17-07-06-Playing-A-CSS-Animation-On-Hover-coolfe</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: Arial;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    a,
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+    
+    .box {
+        width: 100%;
+        height: 100%;
+        background: #2E3F50;
+        position: relative;
+    }
+    
+    .square-box {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        transform-origin: 50% 50%;
+        animation: ani 10s linear infinite;
+        animation-play-state: paused;
+    }
+    
+    .square-box:hover {
+        animation-play-state: running;
+    }
+    
+    .square {
+        width: 100px;
+        height: 100px;
+        background: #120c3d;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 50% 50%;
+        transition: transform 2s;
+    }
+    
+    .square:first-child {
+        transform: rotate(18deg);
+    }
+    
+    .square:nth-child(2) {
+        transform: rotate(36deg);
+    }
+    
+    .square:nth-child(3) {
+        transform: rotate(54deg);
+    }
+    
+    .square:nth-child(4) {
+        transform: rotate(72deg);
+    }
+    
+    .square:nth-child(5) {
+        transform: rotate(90deg);
+    }
+    
+    @keyframes ani {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="square-box">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </div>
+</body>
+
+</html>
